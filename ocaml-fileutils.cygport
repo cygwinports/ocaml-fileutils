@@ -1,0 +1,17 @@
+inherit ocaml
+
+NAME="ocaml-fileutils"
+VERSION=0.5.2
+RELEASE=1
+CATEGORY="Libs"
+SUMMARY="OCaml file manipulation library"
+DESCRIPTION="ocaml-fileutils is a library of pure OCaml functions to manipulate
+real files and filenames."
+HOMEPAGE="http://ocaml-fileutils.forge.ocamlcore.org/"
+SRC_URI="http://forge.ocamlcore.org/frs/download.php/1695/ocaml-fileutils-${VERSION}.tar.gz"
+
+src_compile() {
+	lndirs
+	cd ${B}
+	cygmake
+}
